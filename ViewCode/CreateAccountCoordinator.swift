@@ -28,6 +28,6 @@ class CreateAccountCoordinator: Coordinator {
     }
     
     func didFinishCreating() {
-        parentCoordinator?.childDidFinish(self)
+//        parentCoordinator?.childDidFinish(self)
     }
 }

@@ -7,7 +7,7 @@
 
 import UIKit
 
-class MainCoordinator: Coordinator {
+class MainCoordinator: NSObject, Coordinator, UINavigationControllerDelegate {
     var childCoordinators = [Coordinator]()
     var navigationController: UINavigationController
     
@@ -19,6 +19,7 @@ class MainCoordinator: Coordinator {
     func start() {
         let vc = ProfileViewController()
         vc.coordinator = self
+        navigationController.delegate = self
         navigationController.pushViewController(vc, animated: true)
     }
     
@@ -44,6 +45,27 @@ class MainCoordinator: Coordinator {
                 childCoordinators.remove(at: index)
                 break
             }
+        }
+    }
+    
+    // para detectar se vc foi apresentada
+    func navigationController(_ navigationController: UINavigationController, didShow viewController: UIViewController, animated: Bool) {
+        
+        // pega a vc da qual está partindo
+        guard let fromViewController = navigationController.transitionCoordinator?.viewController(forKey: .from) else {
+            return
+        }
+        
+        // checa se a fromVC já está no array. Se estiver, significa que está fazendo o push ao invés do pop. Sair
+        if navigationController.viewControllers.contains(fromViewController) {
+            return
+        }
+        
+        // se chegar aqui, quer dizer que está fazendo o pop (é para retirar), então checa se é a vc que a gente quer retirar
+        if let createAccountViewController = fromViewController as? CreateAccountViewController {
+            // está retirando a view controller, então retira seu coordinator também
+            childDidFinish(createAccountViewController.coordinator!)
+            print("pop")
         }
     }
 }

@@ -22,9 +22,10 @@ class CreateAccountViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-    override func viewDidDisappear(_ animated: Bool) {
-        coordinator?.didFinishCreating()
-    }
+    // navegação para trás será feita por meio do delegate da navcontroller no MainCoordinator
+//    override func viewDidDisappear(_ animated: Bool) {
+//        coordinator?.didFinishCreating()
+//    }
 
 
 }
