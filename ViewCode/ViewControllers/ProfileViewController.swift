@@ -26,7 +26,7 @@ class ProfileViewController: UIViewController {
     }
     
     @objc func loginButtonTapped(_ sender: UIButton) {
-        coordinator?.login()
+        coordinator?.login(send: screen.leftBox.title.text)
     }
     
     @objc func createAccount(_ sender: UIButton) {

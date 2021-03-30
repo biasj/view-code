@@ -11,8 +11,11 @@ class LoginViewController: UIViewController {
     let loginScreen = LoginView()
     weak var coordinator: MainCoordinator?
     
+    var textTitle = ""
+    
     override func loadView() {
         self.view = loginScreen
+        loginScreen.loginGrid.title.text = textTitle
     }
     
     override func viewDidLoad() {

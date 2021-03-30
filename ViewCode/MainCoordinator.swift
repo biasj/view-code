@@ -31,9 +31,10 @@ class MainCoordinator: NSObject, Coordinator, UINavigationControllerDelegate {
         child.start()
     }
     
-    func login() {
+    func login(send text: String) {
         let vc = LoginViewController()
         vc.coordinator = self
+        vc.textTitle = text
         navigationController.pushViewController(vc, animated: true)
     }
     
