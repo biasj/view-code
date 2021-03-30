@@ -9,7 +9,7 @@ import UIKit
 
 class CreateAccountViewController: UIViewController {
     
-    weak var coordinator: MainCoordinator?
+    weak var coordinator: CreateAccountCoordinator?
     let createAccountView = CreateAccountView()
     
     override func loadView() {
@@ -20,6 +20,10 @@ class CreateAccountViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        coordinator?.didFinishCreating()
     }
 
 

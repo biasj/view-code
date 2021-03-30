@@ -17,6 +17,7 @@
 		858A9E5B2612244B00799B09 /* ViewCodeProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858A9E5A2612244B00799B09 /* ViewCodeProtocol.swift */; };
 		858A9E5E261224A600799B09 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858A9E5D261224A600799B09 /* ProfileView.swift */; };
 		858A9E6126124E0600799B09 /* GridBoxView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858A9E6026124E0600799B09 /* GridBoxView.swift */; };
+		85931D3E2613E5810062B257 /* CreateAccountCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85931D3D2613E5810062B257 /* CreateAccountCoordinator.swift */; };
 		85E566CD2613829A002112A2 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85E566CC2613829A002112A2 /* Coordinator.swift */; };
 		85E566D02613835E002112A2 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85E566CF2613835E002112A2 /* MainCoordinator.swift */; };
 		85E566D3261385C1002112A2 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85E566D2261385C1002112A2 /* LoginViewController.swift */; };
@@ -36,6 +37,7 @@
 		858A9E5A2612244B00799B09 /* ViewCodeProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewCodeProtocol.swift; sourceTree = "<group>"; };
 		858A9E5D261224A600799B09 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		858A9E6026124E0600799B09 /* GridBoxView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridBoxView.swift; sourceTree = "<group>"; };
+		85931D3D2613E5810062B257 /* CreateAccountCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountCoordinator.swift; sourceTree = "<group>"; };
 		85E566CC2613829A002112A2 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		85E566CF2613835E002112A2 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
 		85E566D2261385C1002112A2 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -82,6 +84,7 @@
 				858A9E5A2612244B00799B09 /* ViewCodeProtocol.swift */,
 				85E566CC2613829A002112A2 /* Coordinator.swift */,
 				85E566CF2613835E002112A2 /* MainCoordinator.swift */,
+				85931D3D2613E5810062B257 /* CreateAccountCoordinator.swift */,
 			);
 			path = ViewCode;
 			sourceTree = "<group>";
@@ -185,6 +188,7 @@
 				858A9E5B2612244B00799B09 /* ViewCodeProtocol.swift in Sources */,
 				858A9E5E261224A600799B09 /* ProfileView.swift in Sources */,
 				858A9E452612150400799B09 /* AppDelegate.swift in Sources */,
+				85931D3E2613E5810062B257 /* CreateAccountCoordinator.swift in Sources */,
 				858A9E472612150400799B09 /* SceneDelegate.swift in Sources */,
 				85E566D82613861C002112A2 /* LoginView.swift in Sources */,
 				85E566CD2613829A002112A2 /* Coordinator.swift in Sources */,
