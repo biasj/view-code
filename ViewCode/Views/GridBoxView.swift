@@ -28,10 +28,9 @@ final class GridBoxView: UIView {
         return view
     }()
     
-    var title: UILabel = {
-        let view = UILabel(frame: .zero)
+    var title: UITextView = {
+        let view = UITextView(frame: .zero)
         view.backgroundColor = .orange
-        
         return view
     }()
     
