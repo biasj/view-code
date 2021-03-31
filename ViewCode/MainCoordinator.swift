@@ -7,7 +7,8 @@
 
 import UIKit
 
-class MainCoordinator: Coordinator {
+// ao invés de criar child coordinators como classes (ex branch child), faz conformar com protocolos
+class MainCoordinator: Coordinator, LogginIn, AccountCreating {
     var childCoordinators = [Coordinator]()
     var navigationController: UINavigationController
     
@@ -18,7 +19,17 @@ class MainCoordinator: Coordinator {
     
     func start() {
         let vc = ProfileViewController()
-        vc.coordinator = self
+//        vc.coordinator = self
+        
+        // com as closures
+        vc.loginAction = { [weak self] in
+            self?.login()
+        }
+        
+        vc.createAccountAction = { [weak self] in
+            self?.createAccount()
+        }
+        
         navigationController.pushViewController(vc, animated: true)
     }
     
@@ -33,4 +44,12 @@ class MainCoordinator: Coordinator {
         vc.coordinator = self
         navigationController.pushViewController(vc, animated: true)
     }
+}
+
+protocol AccountCreating: AnyObject {
+    func createAccount()
+}
+
+protocol LogginIn: AnyObject {
+    func login()
 }

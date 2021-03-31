@@ -10,7 +10,13 @@ import UIKit
 class ProfileViewController: UIViewController {
     
     let screen = ProfileView()
-    weak var coordinator: MainCoordinator?
+    
+    // refere direto ao protocolo ao invés do tipo concreto
+//    weak var coordinator: (LogginIn & AccountCreating)?
+    
+    // ou usa as closures
+    var loginAction: (() -> Void)?
+    var createAccountAction: (() -> Void)?
     
     override func loadView() {
         self.view = screen
@@ -25,13 +31,24 @@ class ProfileViewController: UIViewController {
         
     }
     
+    
+    // e usa assim com o coordinator
+//    @objc func loginButtonTapped(_ sender: UIButton) {
+//        coordinator?.login()
+//    }
+//
+//    @objc func createAccount(_ sender: UIButton) {
+//        coordinator?.createAccount()
+//    }
+
+    
+    // implementação com closure
     @objc func loginButtonTapped(_ sender: UIButton) {
-        coordinator?.login()
+        loginAction?()
     }
     
     @objc func createAccount(_ sender: UIButton) {
-        coordinator?.createAccount()
+        createAccountAction?()
     }
-
 }
 
